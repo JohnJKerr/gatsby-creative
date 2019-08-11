@@ -1,35 +1,33 @@
 import { Link } from "gatsby"
 import React from "react"
 import Scrollspy from "react-scrollspy"
+import { Navbar } from "react-bootstrap"
 
 const Header = () => (
   <>
-    <nav className="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <Navbar className="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" expand="lg">
       <div className="container">
         <a className="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-          <div className="collapse navbar-collapse" id="navbarResponsive">
-            <Scrollspy className="navbar-nav ml-auto my-2 my-lg-0" items={["about", "services", "portfolio", "contact"]} currentClassName="active">
-              <li className="nav-item">
-                <a className="nav-link js-scroll-trigger" href="#about">About</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link js-scroll-trigger" href="#services">Services</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link js-scroll-trigger" href="#contact">Contact</a>
-              </li>
-            </Scrollspy>
-          </div>
+        <Navbar.Toggle aria-controls="navbarResponsive"/>
+        <Navbar.Collapse id="navbarResponsive">
+          <Scrollspy className="navbar-nav ml-auto my-2 my-lg-0" items={["about", "services", "portfolio", "contact"]}
+                     currentClassName="active">
+            <li className="nav-item">
+              <a className="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link js-scroll-trigger" href="#services">Services</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </Scrollspy>
+        </Navbar.Collapse>
       </div>
-    </nav>
+    </Navbar>
     <header className="masthead">
       <div className="container h-100">
         <div className="row h-100 align-items-center justify-content-center text-center">
