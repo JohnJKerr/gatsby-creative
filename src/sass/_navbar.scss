@@ -52,23 +52,26 @@
 				}
 			}
 		}
-		// Navbar styling applied when the page is scrolled
-		&.navbar-scrolled {
-			box-shadow: $box-shadow;
-			background-color: $white;
-			.navbar-brand {
-				color: $gray-900;
-				&:hover {
-					color: $primary;
-				}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	// Navbar styling applied when the page is scrolled
+	.site-container.navbar-scrolled #mainNav {
+		box-shadow: $box-shadow;
+		background-color: $white;
+		.navbar-brand {
+			color: $gray-900;
+			&:hover {
+				color: $primary;
 			}
-			.navbar-nav {
-				.nav-item {
-					.nav-link {
-						color: $gray-900;
-						&:hover {
-							color: $primary;
-						}
+		}
+		.navbar-nav {
+			.nav-item {
+				.nav-link {
+					color: $gray-900;
+					&:hover {
+						color: $primary;
 					}
 				}
 			}
