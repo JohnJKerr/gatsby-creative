@@ -2637,6 +2637,11 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classnames@^2.2.5:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
+
 cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
@@ -9384,6 +9389,15 @@ react-reconciler@^0.20.0:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.13.6"
+
+react-scrollspy@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/react-scrollspy/-/react-scrollspy-3.4.0.tgz#5cf2e5b3e5de2d268a9456dfbbebed77aa6358a2"
+  integrity sha512-l7XDF6ZWuP0X+pLw+i5V8akWph/IQZ6/fnPXPN2R/xsgbXzXLtC/3URNcxj/hKIRjQpdYMrJR2VKqMkw2nnTvQ==
+  dependencies:
+    babel-runtime "^6.26.0"
+    classnames "^2.2.5"
+    prop-types "^15.5.10"
 
 react-side-effect@^1.1.0:
   version "1.1.5"

@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import Scrollspy from "react-scrollspy"
 
 const Header = () => (
   <>
@@ -11,22 +12,22 @@ const Header = () => (
                 aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarResponsive">
-          <ul className="navbar-nav ml-auto my-2 my-lg-0">
-            <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
+          <div className="collapse navbar-collapse" id="navbarResponsive">
+            <Scrollspy className="navbar-nav ml-auto my-2 my-lg-0" items={["about", "services", "portfolio", "contact"]} currentClassName="active">
+              <li className="nav-item">
+                <a className="nav-link js-scroll-trigger" href="#about">About</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link js-scroll-trigger" href="#services">Services</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              </li>
+            </Scrollspy>
+          </div>
       </div>
     </nav>
     <header className="masthead">
