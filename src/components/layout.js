@@ -7,8 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
 import "./layout.scss"
 
@@ -20,16 +18,6 @@ const isScrolled = (element) => {
   const scrollNode = getScrollNode(element)
   return scrollNode.scrollTop > 0
 }
-
-// const data = useStaticQuery(graphql`
-//   query SiteTitleQuery {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//   }
-// `)
 
 export default class Layout extends React.Component {
   constructor(props) {
@@ -69,7 +57,6 @@ export default class Layout extends React.Component {
       <div
         className={className}
         ref={this.siteContainer}>
-        {/*<Header siteTitle={data.site.siteMetadata.title}/>*/}
         <Header/>
         <main>{this.props.children}</main>
         <footer className="bg-light py-5">
