@@ -1,6 +1,10 @@
 // Import custom variables (overrides Bootstrap default variables)
 @import "../sass/variables.scss";
 
+// Import font awesome
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+
 // Import Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
