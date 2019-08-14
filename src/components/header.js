@@ -10,7 +10,7 @@ const Header = () => (
         <a className="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
         <Navbar.Toggle aria-controls="navbarResponsive"/>
         <Navbar.Collapse id="navbarResponsive">
-          <Scrollspy className="navbar-nav ml-auto my-2 my-lg-0" items={["about", "services", "portfolio", "contact"]}
+          <Scrollspy className="navbar-nav ml-auto my-2 my-lg-0" items={["about-body", "services-body", "portfolio-body", "contact-body"]}
                      currentClassName="active">
             <li className="nav-item">
               <a className="nav-link js-scroll-trigger" href="#about">About</a>
