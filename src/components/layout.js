@@ -56,7 +56,8 @@ export default class Layout extends React.Component {
     return (
       <div
         className={className}
-        ref={this.siteContainer}>
+        ref={this.siteContainer}
+        id="page-top">
         <Header/>
         <main>{this.props.children}</main>
         <footer className="bg-light py-5">

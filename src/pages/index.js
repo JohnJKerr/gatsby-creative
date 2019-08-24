@@ -1,18 +1,22 @@
 import React from "react"
 import { graphql } from "gatsby"
-import ScrollableAnchor from "react-scrollable-anchor"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Scroller from "../components/scroller"
 import Img from "gatsby-image"
 
 export default class IndexPage extends React.Component {
+  constructor(props) {
+    super(props);
+    Scroller.handleAnchorScroll = Scroller.handleAnchorScroll.bind(this);
+  }
+
   render() {
     return (
       <Layout>
         <SEO title="Home"/>
-        <ScrollableAnchor id={"about"}>
-          <section className="page-section bg-primary" id="about-body">
+          <section className="page-section bg-primary" id="about">
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-lg-8 text-center">
@@ -23,15 +27,13 @@ export default class IndexPage extends React.Component {
                     running in no time! Choose one of our open source, free to download, and easy to use themes! No
                     strings
                     attached!</p>
-                  <a className="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+                  <a className="btn btn-light btn-xl js-scroll-trigger" href="#services" onClick={Scroller.handleAnchorScroll}>Get Started!</a>
                 </div>
               </div>
             </div>
           </section>
-        </ScrollableAnchor>
 
-        <ScrollableAnchor id={"services"}>
-          <section className="page-section" id="services-body">
+          <section className="page-section" id="services">
             <div className="container">
               <h2 className="text-center mt-0">At Your Service</h2>
               <hr className="divider my-4"/>
@@ -67,10 +69,8 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
           </section>
-        </ScrollableAnchor>
 
-        <ScrollableAnchor id={"portfolio"}>
-          <section id="portfolio-body">
+          <section id="portfolio">
             <div className="container-fluid p-0">
               <div className="row no-gutters">
                 <div className="col-lg-4 col-sm-6">
@@ -154,7 +154,6 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
           </section>
-        </ScrollableAnchor>
 
         <section className="page-section bg-dark text-white">
           <div className="container text-center">
@@ -163,8 +162,7 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
 
-        <ScrollableAnchor id={"contact"}>
-          <section className="page-section" id="contact-body">
+          <section className="page-section" id="contact">
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-lg-8 text-center">
@@ -187,7 +185,6 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
           </section>
-        </ScrollableAnchor>
       </Layout>
     )
   }
