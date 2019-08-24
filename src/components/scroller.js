@@ -7,7 +7,8 @@ export default class Scroller {
     const scrollNode = document.querySelector(id);
     const top = scrollNode.getBoundingClientRect().top;
     const scrollTop = window.pageYOffset || document.scrollTop;
-    const scrollTo = top + scrollTop;
+    const fixedHeight = 72;
+    const scrollTo = top + scrollTop - fixedHeight;
     if(document.scrollTo) {
       document.scrollTo({
         top: scrollTo,
