@@ -1,0 +1,17 @@
+.modal-content {
+	background: transparent;
+	border: none;
+
+	.modal-header {
+		border: none;
+
+		button {
+			color: #fff;
+			opacity: 0.65;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
