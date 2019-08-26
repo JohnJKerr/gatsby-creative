@@ -1,6 +1,11 @@
+.modal-dialog {
+	position: static;
+}
+
 .modal-content {
 	background: transparent;
 	border: none;
+	position: static;
 
 	.modal-header {
 		border: none;
@@ -11,6 +16,19 @@
 
 			&:hover {
 				opacity: 1;
+			}
+		}
+	}
+
+	.modal-body {
+		padding-top: 0;
+		position: static;
+
+		.carousel {
+			position: static;
+
+			.carousel-control-prev, .carousel-control-next {
+				width: 5%;
 			}
 		}
 	}

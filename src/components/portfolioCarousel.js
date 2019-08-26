@@ -22,7 +22,7 @@ const PortfolioCarousel = ({ show, onHide, images, current }) => {
       <Modal.Header closeButton>
       </Modal.Header>
       <Modal.Body>
-        <Carousel defaultActiveIndex={current}>
+        <Carousel interval={null} indicators={false} defaultActiveIndex={current}>
           {carouselItems}
         </Carousel>
       </Modal.Body>

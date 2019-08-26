@@ -39,3 +39,12 @@ hr.light {
 .page-section {
 	padding: 8rem 0;
 }
+
+// Modal
+.modal-backdrop {
+	background-color: #0b0b0b;
+}
+
+.modal-backdrop.show {
+	opacity: 0.8;
+}
