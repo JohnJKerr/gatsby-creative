@@ -3,7 +3,7 @@ export default class Scroller {
     e.preventDefault();
     const element = e.target;
     const id = element.getAttribute('href');
-    const document = element.ownerDocument.documentElement;
+    const document = element.ownerDocument.scrollingElement || element.ownerDocument.documentElement;
     const scrollNode = document.querySelector(id);
     const top = scrollNode.getBoundingClientRect().top;
     const scrollTop = window.pageYOffset || document.scrollTop;

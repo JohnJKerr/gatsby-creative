@@ -6,8 +6,6 @@ import Img from "gatsby-image"
 import "./portfolioCarousel.scss"
 
 const PortfolioCarousel = ({ show, onHide, images, current }) => {
-  const [index, setIndex] = React.useState();
-
   const carouselItems = images.map((image, index) =>
     <Carousel.Item key={index}>
       <figure>
