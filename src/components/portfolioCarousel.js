@@ -6,9 +6,18 @@ import Img from "gatsby-image"
 import "./portfolioCarousel.scss"
 
 const PortfolioCarousel = ({ show, onHide, images, current }) => {
+  const [index, setIndex] = React.useState();
+
   const carouselItems = images.map((image, index) =>
     <Carousel.Item key={index}>
-      <Img fluid={image.node.childImageSharp.fluid}/>
+      <figure>
+        <Img fluid={image.node.childImageSharp.fluid}/>
+        <figcaption>
+          <div className="bottom-bar">
+            <div className="counter">{index + 1} of {images.length}</div>
+          </div>
+        </figcaption>
+      </figure>
     </Carousel.Item>
   );
 
@@ -22,7 +31,7 @@ const PortfolioCarousel = ({ show, onHide, images, current }) => {
       <Modal.Header closeButton>
       </Modal.Header>
       <Modal.Body>
-        <Carousel interval={null} indicators={false} defaultActiveIndex={current}>
+        <Carousel interval={null} indicators={false} defaultActiveIndex={current} slide={false}>
           {carouselItems}
         </Carousel>
       </Modal.Body>
