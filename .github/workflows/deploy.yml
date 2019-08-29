@@ -9,8 +9,11 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-    - name: npm install
+    - name: NPM Install
       run: npm install
+
+    - name: Install Gatsby CLI
+      run: npm install gatsby-cli -g
 
     - name: deploy
       uses: JamesIves/github-pages-deploy-action@master
