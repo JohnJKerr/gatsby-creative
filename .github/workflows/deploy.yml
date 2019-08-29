@@ -15,4 +15,4 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
         FOLDER: public
-        BUILD_SCRIPT: npx gatsby build --prefix-paths
+        BUILD_SCRIPT: npm install && npx gatsby build --prefix-paths
