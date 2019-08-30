@@ -15,7 +15,7 @@ Gatsby implementation of [Start Bootstrap's Creative](https://startbootstrap.com
 ## ✨ Features
 
 - [React Bootstrap](https://react-bootstrap.github.io)
-- [Start Boostrap Creative](https://startbootstrap.com/previews/creative)
+- [Start Bootstrap Creative](https://startbootstrap.com/previews/creative)
 - [GitHub Actions](https://github.com/features/actions)
 - [React Scrollspy](https://github.com/makotot/react-scrollspy)
 
