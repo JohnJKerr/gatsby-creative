@@ -5,7 +5,8 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Scroller from "../components/scroller"
-import PortfolioCarousel from "../components/portfolioCarousel"
+import PortfolioModal from "../components/portfolio/modal"
+import PortfolioCarousel from "../components/portfolio/carousel"
 
 export default class IndexPage extends React.Component {
   constructor(props) {
@@ -205,10 +206,9 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
         </section>
-        <PortfolioCarousel show={this.state.modalShow}
-                           onHide={() => this.setModal(false, 0)}
-                           images={this.props.data.images.edges}
-                           current={this.state.modalCurrent}/>
+        <PortfolioModal show={this.state.modalShow} onHide={() => this.setModal(false, 0)}>
+          <PortfolioCarousel images={this.props.data.images.edges} current={this.state.modalCurrent}/>
+        </PortfolioModal>
       </Layout>
     )
   }

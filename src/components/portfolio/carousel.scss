@@ -1,0 +1,36 @@
+.carousel {
+	position: static;
+
+	.carousel-control-prev, .carousel-control-next {
+		width: 5%;
+		padding-top: 56px;
+	}
+
+	figure {
+		margin: 0;
+
+		figcaption {
+			height: 24px;
+			position: relative;
+		}
+
+		.bottom-bar {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			cursor: auto;
+
+			.counter {
+				position: absolute;
+				top: 4px;
+				right: 0;
+				color: #CCC;
+				font-size: 12px;
+				line-height: 18px;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+

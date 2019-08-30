@@ -1,0 +1,28 @@
+.modal-dialog {
+	position: static;
+	transition: none !important;
+}
+
+.modal-content {
+	background: transparent;
+	border: none;
+	position: static;
+
+	.modal-header {
+		border: none;
+
+		button {
+			color: #fff;
+			opacity: 0.65;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.modal-body {
+		padding-top: 0;
+		position: static;
+	}
+}
