@@ -70,6 +70,25 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 This project also contains an example of [GitHub Actions](https://github.com/features/actions) deployment to [GitHub Pages](https://pages.github.com). View the [`deploy.yml`](https://github.com/JohnJKerr/gatsby-creative/blob/master/.github/workflows/deploy.yml) for the build definition.
 
 The build process deploys to a folder rather than the root, and therefore uses the `--pages-prefix` flag in the build step and `pathPrefix: '/gatsby-creative'` in [`gatsby-config.js`](https://github.com/JohnJKerr/gatsby-creative/blob/master/gatsby-config.js).
+
+#### Access Token
+
+If you wish to use the GitHub Actions workflow to deploy to GitHub Pages you will need to add an `ACCESS_TOKEN` secret to your repository
+
+Go to https://github.com/settings/tokens to generate a Personal Access Token and add it to your account. The token will need the following permissions:
+
+- repo
+- read:packages
+- write:packages
+
+Make a copy of your token as you will not be able to access it again.
+
+Return to your repository, go to settings and add a secret with the name `ACCESS_TOKEN`.
+
+The Action will then deploy your site to `{your-github-pages-url}/{your-repository}`.
  
+#### Not Using GitHub Pages?
+
+If you do not wish to use GitHub Pages, simply remove the `/.github/workflows/deploy.yml` file.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
