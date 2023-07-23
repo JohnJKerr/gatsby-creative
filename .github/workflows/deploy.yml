@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: build
-      run: npm install && npx gatsby build
+      run: npm install && npx gatsby build --prefix-paths
     - name: deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:
